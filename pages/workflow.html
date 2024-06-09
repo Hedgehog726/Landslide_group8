@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<!--
+	Twenty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>Workflow</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/custom-styles.css" />
+  </head>
+  <body class="left-sidebar is-preload">
+    <div id="page-wrapper">
+      <!-- Header -->
+      <header id="header">
+        <h1 id="logo">My WebGIS - Workflow</h1>
+        <nav id="nav">
+          <ul>
+            <li class="current"><a href="../index.html">HOME</a></li>
+            <li class="current"><a href="workflow.html">Workflow</a></li>
+            <li class="current"><a href="result.html">Results</a></li>
+            <li class="current"><a href="webgis.html">WebGIS</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- Main -->
+      <article id="main">
+        <header class="special container">
+          <span class="icon solid fa-globe"></span>
+          <h2>
+            <strong style="font-size: 2em">Workflow</strong>
+          </h2>
+          <p style="font-size: 1.5em">
+            In this part, we will show you all the steps we did to obtain all
+            our final results including susceptibility map and exposure
+            assessment.
+          </p>
+        </header>
+        <!--Step1-->
+        <div class="wrapper style4 container">
+          <div>
+            <div>
+              <h2 style="text-align: center">Step1 Data Preprocessing</h2>
+              <!--Origin Data-->
+              <p>
+                <strong>
+                  For all the origin data, we clip all of them considering only
+                  the region of interest and we checked that the pixel size and
+                  CRS of all layers were coherent.</strong
+                >
+              </p>
+              <h3 style="text-align: center">Basic Data</h3>
+              <div class="container text-center">
+                <div class="row">
+                  <div class="col">
+                    <figure>
+                      <img
+                        src="../images/step1/dtm.png"
+                        alt=""
+                        style="max-width: 100%; height: auto"
+                      />
+                      <figcaption>
+                        DTM<br />Raster dataset representing the terrain surface
+                        consisting of XYZ coordinates. Not only elevation but
+                        helps in deriving additional information.
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <div class="col">
+                    <figure>
+                      <img
+                        src="../images/step1/ndvi.png"
+                        alt=""
+                        style="max-width: 100%; height: auto"
+                      />
+                      <figcaption>
+                        NDVI<br />The Normalized Difference Vegetation Index
+                        (NDVI) is an indicator of the greenness of the biomas
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <figure>
+                      <img
+                        src="../images/step1/dusaf.png"
+                        alt=""
+                        style="max-width: 100%; height: auto"
+                      />
+                      <figcaption>
+                        Land use and land cover<br />A regional product (DUSAF
+                        6.) is used. It is based on aerial photogrammetry and
+                        represents eight classes.
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <div class="col">
+                    <figure>
+                      <img
+                        src="../images/step1/rivers.png"
+                        alt=""
+                        style="max-width: 100%; height: auto"
+                      />
+                      <figcaption>
+                        Rivers<br />For each river network, buffer zones were
+                        produced at 50, 100, 200, 500, and more than 500 m.
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <figure>
+                      <img
+                        src="../images/step1/roads.png"
+                        alt=""
+                        style="max-width: 100%; height: auto"
+                      />
+                      <figcaption>
+                        Roads<br />Road networks. For each road network, buffer
+                        zones were produced at 50, 100, 200, 500, and more than
+                        500 m.
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <div class="col">
+                    <figure>
+                      <img
+                        src="../images/step1/faults.png"
+                        alt=""
+                        style="max-width: 100%; height: auto"
+                      />
+                      <figcaption>
+                        Geological Faults<br />For each fault, buffer zones were
+                        produced at 50, 100, 200, 500, and more than 500 m.
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+
+                <!--Computed Data-->
+                <h3 style="text-align: center; margin-top: 3em">
+                  Computed Data From DTM
+                </h3>
+                <div class="container text-center">
+                  <div class="row">
+                    <div class="col">
+                      <figure>
+                        <img
+                          src="../images/step1/slope.png"
+                          alt=""
+                          style="max-width: 100%; height: auto"
+                        />
+                        <figcaption>
+                          Slope<br />The angle of slope is in a strong
+                          relationship with the occurrence of landslides. With
+                          the increase of the angle the shear stress is
+                          increasing and, the possibility of a movement is
+                          higher.
+                        </figcaption>
+                      </figure>
+                    </div>
+                    <div class="col">
+                      <figure>
+                        <img
+                          src="../images/step1/aspect.png"
+                          alt=""
+                          style="max-width: 100%; height: auto"
+                        />
+                        <figcaption>
+                          Aspect<br />depicts the direction of the slope. The
+                          orientation of the slope is related to the soil
+                          moisture content and vegetation density.
+                        </figcaption>
+                      </figure>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <figure>
+                        <img
+                          src="../images/step1/plan.png"
+                          alt=""
+                          style="max-width: 100%; height: auto"
+                        />
+                        <figcaption>
+                          Plan Curvature<br />The Plan curvature is
+                          perpendicular to the direction of the maximum slope.
+                          Planform curvature relates to the convergence and
+                          divergence of flow across a surface.
+                        </figcaption>
+                      </figure>
+                    </div>
+                    <div class="col">
+                      <figure>
+                        <img
+                          src="../images/step1/profile.png"
+                          alt=""
+                          style="max-width: 100%; height: auto"
+                        />
+                        <figcaption>
+                          Profile Curvature<br />The Profile curvature is
+                          parallel to the slope and indicates the direction of
+                          maximum slope. It affects the acceleration and
+                          deceleration of flow across the surface.
+                        </figcaption>
+                      </figure>
+                    </div>
+                  </div>
+                </div>
+
+                <!--LZ and NLZ-->
+                <h3 style="text-align: center; margin-top: 3em">
+                  Landslide Zone and Non Landslide Zone
+                </h3>
+                <div class="container text-center">
+                  <div class="row">
+                    <div class="col">
+                      <figure>
+                        <img
+                          src="../images/step1/LZ_unioned.png"
+                          alt=""
+                          style="max-width: 100%; height: auto"
+                        />
+                        <figcaption>Landslide Zone</figcaption>
+                      </figure>
+                    </div>
+                    <div class="col">
+                      <figure>
+                        <img
+                          src="../images/step1/NLZ.png"
+                          alt=""
+                          style="max-width: 100%; height: auto"
+                        />
+                        <figcaption>Non Landslide Zone</figcaption>
+                      </figure>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p style="margin-top: 3em">
+                <strong>
+                  We used the landslide inventory to define the landslide zone.
+                  And for non landslide zone, We defined this areas as the
+                  slopes with angle smaller then 20° or grater then 70° using
+                  the raster calculator. Because of some overlappings between LZ
+                  and NLZ, we remove all the overlapping parts from the NLZ. And
+                  because there were too many small patches of pixels, we
+                  removed them with a threshold of 25. Thereby, we obtain the
+                  final LZ and NLZ.<br /><br />Then, we split both zones into
+                  training dataset and testing dataset with a ration of 70%/30%.
+                  For futher operations, we merged 2 layer into 1 layer and
+                  randomly selected 1000 points(350 points/150 points from each
+                  of the two layers to form the training/testing set
+                  respectively.) in total inside the polygons.
+                </strong>
+              </p>
+              <table class="table" style="text-align: center">
+                <thead>
+                  <tr>
+                    <th scope="col">Train_Test</th>
+                    <th scope="col">Hazard</th>
+                    <th scope="col">Number of Points</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Training</th>
+                    <td>1(NLZ)</td>
+                    <td>350</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Training</th>
+                    <td>2(LZ)</td>
+                    <td>350</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Testing</th>
+                    <td>1(NLZ)</td>
+                    <td>150</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Testing</th>
+                    <td>2()LZ</td>
+                    <td>150</td>
+                  </tr>
+                </tbody>
+              </table>
+              <figure style="text-align: center">
+                <img
+                  src="../images/step1/Train_Test_Points.png"
+                  alt=""
+                  style="width: 50%; height: auto"
+                />
+                <figcaption>Training/Testing Points</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <!--Step2-->
+        <div class="wrapper style4 container">
+          <!-- Content -->
+
+          <div>
+            <div>
+              <h2 style="text-align: center">
+                Step2 Susceptibility Map Generation
+              </h2>
+              <p style="margin-top: 3em">
+                <strong>
+                  For the generation of the susceptibility map we use Dzetsaka
+                  plugin in QGIS with random forest. To generate the
+                  susceptibility map, we used raster calculator to convert
+                  classification and confidence to probability. Then we
+                  validated the accuracy of the our output using python
+                  script.</strong
+                >
+              </p>
+              <figure style="text-align: center">
+                <img
+                  src="../images/step2/LandslideSusceptibilityMap.png"
+                  alt=""
+                  style="width: 50%; height: auto"
+                />
+                <figcaption>Susceptibility Map</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <!--Step3-->
+        <div class="wrapper style4 container">
+          <!-- Content -->
+
+          <div>
+            <div>
+              <h2 style="text-align: center">
+                Step3 Data preprocessing for exposure assessment
+              </h2>
+              <p style="margin-top: 3em">
+                <strong>
+                  To analyze the exposure assessment we downloaded the
+                  population raster dataset (WorldPop map) and we reprojected
+                  the population raster dataset using the same CRS of layers
+                  obtained in the previous steps. We reclassified the
+                  susceptibility raster map to 4 classes:</strong
+                >
+              </p>
+              <table class="table" style="text-align: center">
+                <thead>
+                  <tr>
+                    <th scope="col">Probability</th>
+                    <th scope="col">Class</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">[0,25)</th>
+                    <td>Low</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">[25,50)</th>
+                    <td>Moderate</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">[50,75)</th>
+                    <td colspan="2">High</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">[75,100]</th>
+                    <td colspan="2">Very High</td>
+                  </tr>
+                </tbody>
+              </table>
+              <figure style="text-align: center">
+                <img
+                  src="../images/step3/LandslideSusceptibilityMap_reclass.png"
+                  alt=""
+                  style="width: 50%; height: auto"
+                />
+                <figcaption>Susceptibility Map Reclassified</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <!--Step4-->
+        <div class="wrapper style4 container">
+          <!-- Content -->
+
+          <div>
+            <div>
+              <h2 style="text-align: center">Step4 Exposure Assessment</h2>
+              <p style="margin-top: 3em">
+                <strong>
+                  For the last step, we used QGIS Raster layer zonal statistics
+                  tool to compute the population count in each class.</strong
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Footer -->
+      <footer id="footer">
+        <ul class="copyright">
+          <li>&copy; My WebGIS</li>
+          <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+        </ul>
+      </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.dropotron.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/browser.min.js"></script>
+    <script src="/js/breakpoints.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>
