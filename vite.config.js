@@ -9,7 +9,7 @@ export default {
 
     // Change to the name of your repository
     // According to https://vitejs.dev/guide/static-deploy.html 
-    base: '/LandslideMap_Group08/', 
+    base: '/Landslide_group8/', 
 
     publicDir: "public",
 
