@@ -57,14 +57,14 @@
               <p>
                 <strong>
                   To ensure consistency and optimize the processing of our
-                  spatial data, we first <b>reproject</b> all raw datasets to
-                  the same coordinate system, specifically aligning with the DEM
+                  spatial data, we first <u>reproject</u> all raw datasets to
+                  the same coordinate system, specifically aligning with the DTM
                   data's coordinate system (EPSG:32632 - WGS 84 / UTM zone 32N).
-                  Subsequently, we <b>clip</b> all datasets to the study area,
+                  Subsequently, we <u>clip</u> all datasets to the study area,
                   which not only reduces data volume but also enhances data
                   processing efficiency and memory usage. Finally, we
-                  <b>resample</b> the datasets to achieve uniform resolution
-                  across all rasters, aligning them to the DEM's resolution of 5
+                  <u>resample</u> the datasets to achieve uniform resolution
+                  across all rasters, aligning them to the DTM's resolution of 5
                   meters.</strong
                 >
               </p>
@@ -337,27 +337,31 @@
                   attribute table after sampling.
                 </strong>
               </p>
-                <div class="container text-center">
-                  <div class="row">
-                    <div class="col-9">
-                      <figure>
-                        <img
-                          src="../images/step1/trainingPointsSampled.jpg"
-                          alt=""
-                          style="max-width: 100%; height: auto"
-                        />
-                        <figcaption>Training and Testing Points Sampled</figcaption>
-                      </figure>
-                    </div>
-                    <div class="col-3" style="padding-left: 15px; padding-top: 10px;">
-                      <figure>
-                        <img
-                          src="../images/step1/factors.png"
-                          alt=""
-                          style="max-width: 100%; height: auto"
-                        />
-                      </figure>
-                    </div>
+              <div class="container text-center">
+                <div class="row">
+                  <div class="col-9">
+                    <figure>
+                      <img
+                        src="../images/step1/trainingPointsSampled.jpg"
+                        alt=""
+                        style="max-width: 100%; height: auto"
+                      />
+                      <figcaption>
+                        Training and Testing Points Sampled
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <div
+                    class="col-3"
+                    style="padding-left: 15px; padding-top: 10px"
+                  >
+                    <figure>
+                      <img
+                        src="../images/step1/factors.png"
+                        alt=""
+                        style="max-width: 100%; height: auto"
+                      />
+                    </figure>
                   </div>
                 </div>
               </div>
