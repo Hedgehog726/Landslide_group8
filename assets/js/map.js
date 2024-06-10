@@ -15,7 +15,7 @@ import VectorLayer from 'ol/layer/Vector';
 let osm = new Tile({
     type: "base",
     title: "Open Street Maps",
-    visible: false,
+    visible: true,
     source: new OSM()
 });
 
@@ -45,6 +45,96 @@ let Population = new Image({
     visible: false
 });
 
+let Dtm = new Image({
+    title: "Dtm",
+    source: new ImageWMS({
+        url: 'https://www.gis-geoserver.polimi.it/geoserver/wms',
+        params: { 'LAYERS': 'gisgeoserver_08:dtm'}
+    }),
+    visible: false
+});
+
+let Ndvi = new Image({
+    title: "Ndvi",
+    source: new ImageWMS({
+        url: 'https://www.gis-geoserver.polimi.it/geoserver/wms',
+        params: { 'LAYERS': 'gisgeoserver_08:ndvi'}
+    }),
+    visible: false
+});
+
+let Dusaf = new Image({
+    title: "Dusaf",
+    source: new ImageWMS({
+        url: 'https://www.gis-geoserver.polimi.it/geoserver/wms',
+        params: { 'LAYERS': 'gisgeoserver_08:dusaf'}
+    }),
+    visible: false
+});
+
+let Faults = new Image({
+    title: "Faults",
+    source: new ImageWMS({
+        url: 'https://www.gis-geoserver.polimi.it/geoserver/wms',
+        params: { 'LAYERS': 'gisgeoserver_08:faults'}
+    }),
+    visible: false
+});
+
+let Rivers = new Image({
+    title: "Rivers",
+    source: new ImageWMS({
+        url: 'https://www.gis-geoserver.polimi.it/geoserver/wms',
+        params: { 'LAYERS': 'gisgeoserver_08:rivers'}
+    }),
+    visible: false
+});
+
+let Roads = new Image({
+    title: "Roads",
+    source: new ImageWMS({
+        url: 'https://www.gis-geoserver.polimi.it/geoserver/wms',
+        params: { 'LAYERS': 'gisgeoserver_08:roads'}
+    }),
+    visible: false
+});
+
+let Slope = new Image({
+    title: "Slope",
+    source: new ImageWMS({
+        url: 'https://www.gis-geoserver.polimi.it/geoserver/wms',
+        params: { 'LAYERS': 'gisgeoserver_08:slope'}
+    }),
+    visible: false
+});
+
+let Aspect = new Image({
+    title: "Aspect",
+    source: new ImageWMS({
+        url: 'https://www.gis-geoserver.polimi.it/geoserver/wms',
+        params: { 'LAYERS': 'gisgeoserver_08:aspect'}
+    }),
+    visible: false
+});
+
+let Plan = new Image({
+    title: "Plan",
+    source: new ImageWMS({
+        url: 'https://www.gis-geoserver.polimi.it/geoserver/wms',
+        params: { 'LAYERS': 'gisgeoserver_08:plan'}
+    }),
+    visible: false
+});
+
+let Profile = new Image({
+    title: "Profile",
+    source: new ImageWMS({
+        url: 'https://www.gis-geoserver.polimi.it/geoserver/wms',
+        params: { 'LAYERS': 'gisgeoserver_08:profile'}
+    }),
+    visible: false
+});
+
 
 //Create the layer groups and add the layers to them
 let basemapLayers = new Group({
@@ -52,17 +142,24 @@ let basemapLayers = new Group({
     layers: [osm]
 })
 
-let overlayLayers = new Group({
-    title: "Overlay Layers",
+let ResultLayers = new Group({
+    title: "Results Layers",
     layers: [
-        SuceptibilityMap, SuceptibilityMapReclass, Population
+        Population,SuceptibilityMapReclass,SuceptibilityMap
+    ]
+})
+
+let FactorsLayers = new Group({
+    title: "Factors Layers",
+    layers: [
+        Dtm, Ndvi, Dusaf, Faults, Rivers, Roads, Slope, Aspect, Plan, Profile
     ]
 })
 
 // Map Initialization
 let map = new Map({
     target: document.getElementById('map'),
-    layers: [basemapLayers, overlayLayers],
+    layers: [basemapLayers, ResultLayers,FactorsLayers],
     view: new View({
         center: fromLonLat([10.12, 45.94]),
         zoom: 12.5
@@ -99,7 +196,7 @@ var bingRoads = new Tile({
 var bingAerial = new Tile({
     title: 'Bing Maps—Aerial',
     type: 'base',
-    visible: true,
+    visible: false,
     source: new BingMaps({
         key: BING_MAPS_KEY,
         imagerySet: 'Aerial'
