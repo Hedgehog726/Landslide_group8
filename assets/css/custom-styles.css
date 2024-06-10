@@ -28,7 +28,7 @@
 
 .custom-banner {
     /*Change the background image here*/
-    background-image: url('../../images/backgroundImg.jpg') !important;
+    background-image: url('../../images/homepage/') !important;
     background-size: cover !important;
 
     /* Original background, for reference
@@ -87,9 +87,6 @@
     position: absolute;
     top: 2px;
     right: 8px;
-}
-
-.ol-popup-closer:after {
 }
 
 /*Add your new styles after this line*/

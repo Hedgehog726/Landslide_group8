@@ -2575,7 +2575,7 @@ button.small,
 	-webkit-animation-fill-mode: forwards;
 	-ms-animation-fill-mode: forwards;
 	animation-fill-mode: forwards;
-	background: rgba(11, 71, 71, 0.9);
+	background: rgba(37, 37, 37, 0.3);
 	color: #fff;
 	display: inline-block;
 	opacity: 0;
@@ -2622,7 +2622,6 @@ button.small,
 /* Main */
 
 #main {
-	background-image: url("images/dark-tl.svg"), url("images/dark-tr.svg"), url("images/dark-bl.svg"), url("images/dark-br.svg");
 	background-position: top left, top right, bottom left, bottom right;
 	background-repeat: no-repeat;
 	background-size: 25em;
@@ -2654,7 +2653,6 @@ body.index #main {
 #cta {
 	background-attachment: scroll, scroll, scroll, fixed;
 	background-color: #645862;
-	background-image: url("images/light-tl.svg"), url("images/light-tr.svg"), url("images/overlay.png"), url("../../images/banner.jpg");
 	background-position: top left, top right, top left, bottom center;
 	background-repeat: no-repeat, no-repeat, repeat, no-repeat;
 	background-size: 25em, 25em, auto, cover;

@@ -56,9 +56,13 @@
               <!--Origin Data-->
               <p>
                 <strong>
-                  For all the origin data, we clip all of them considering only
-                  the region of interest and we checked that the pixel size and
-                  CRS of all layers were coherent.</strong
+                  To ensure consistency and optimize the processing of our spatial data, 
+                  we first <b>reproject</b> all raw datasets to the same coordinate system, specifically 
+                  aligning with the DEM data's coordinate system (EPSG:32632 - WGS 84 / UTM zone 32N). 
+                  Subsequently, we <b>clip</b> all datasets to the study area, which not only reduces data 
+                  volume but also enhances data processing efficiency and memory usage. Finally, we 
+                  <b>resample</b> the datasets to achieve uniform resolution across all rasters, aligning them 
+                  to the DEM's resolution of 5 meters.</strong
                 >
               </p>
               <h3 style="text-align: center">Basic Data</h3>
