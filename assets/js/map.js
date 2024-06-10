@@ -46,7 +46,7 @@ let Population = new Image({
 });
 
 let Dtm = new Image({
-    title: "Dtm",
+    title: "DTM",
     source: new ImageWMS({
         url: 'https://www.gis-geoserver.polimi.it/geoserver/wms',
         params: { 'LAYERS': 'gisgeoserver_08:dtm'}
@@ -55,7 +55,7 @@ let Dtm = new Image({
 });
 
 let Ndvi = new Image({
-    title: "Ndvi",
+    title: "NDVI",
     source: new ImageWMS({
         url: 'https://www.gis-geoserver.polimi.it/geoserver/wms',
         params: { 'LAYERS': 'gisgeoserver_08:ndvi'}
@@ -64,7 +64,7 @@ let Ndvi = new Image({
 });
 
 let Dusaf = new Image({
-    title: "Dusaf",
+    title: "DUSAF",
     source: new ImageWMS({
         url: 'https://www.gis-geoserver.polimi.it/geoserver/wms',
         params: { 'LAYERS': 'gisgeoserver_08:dusaf'}
@@ -118,7 +118,7 @@ let Aspect = new Image({
 });
 
 let Plan = new Image({
-    title: "Plan",
+    title: "Plan Curvature",
     source: new ImageWMS({
         url: 'https://www.gis-geoserver.polimi.it/geoserver/wms',
         params: { 'LAYERS': 'gisgeoserver_08:plan'}
@@ -127,7 +127,7 @@ let Plan = new Image({
 });
 
 let Profile = new Image({
-    title: "Profile",
+    title: "Profile Curvature",
     source: new ImageWMS({
         url: 'https://www.gis-geoserver.polimi.it/geoserver/wms',
         params: { 'LAYERS': 'gisgeoserver_08:profile'}
