@@ -56,13 +56,16 @@
               <!--Origin Data-->
               <p>
                 <strong>
-                  To ensure consistency and optimize the processing of our spatial data, 
-                  we first <b>reproject</b> all raw datasets to the same coordinate system, specifically 
-                  aligning with the DEM data's coordinate system (EPSG:32632 - WGS 84 / UTM zone 32N). 
-                  Subsequently, we <b>clip</b> all datasets to the study area, which not only reduces data 
-                  volume but also enhances data processing efficiency and memory usage. Finally, we 
-                  <b>resample</b> the datasets to achieve uniform resolution across all rasters, aligning them 
-                  to the DEM's resolution of 5 meters.</strong
+                  To ensure consistency and optimize the processing of our
+                  spatial data, we first <b>reproject</b> all raw datasets to
+                  the same coordinate system, specifically aligning with the DEM
+                  data's coordinate system (EPSG:32632 - WGS 84 / UTM zone 32N).
+                  Subsequently, we <b>clip</b> all datasets to the study area,
+                  which not only reduces data volume but also enhances data
+                  processing efficiency and memory usage. Finally, we
+                  <b>resample</b> the datasets to achieve uniform resolution
+                  across all rasters, aligning them to the DEM's resolution of 5
+                  meters.</strong
                 >
               </p>
               <h3 style="text-align: center">Basic Data</h3>
@@ -298,19 +301,56 @@
                   </tr>
                   <tr>
                     <th scope="row">Testing</th>
-                    <td>2()LZ</td>
+                    <td>2(LZ)</td>
                     <td>150</td>
                   </tr>
                 </tbody>
               </table>
-              <figure style="text-align: center">
-                <img
-                  src="../images/step1/Train_Test_Points.png"
-                  alt=""
-                  style="width: 50%; height: auto"
-                />
-                <figcaption>Training/Testing Points</figcaption>
-              </figure>
+              <div class="container text-center">
+                <div class="row">
+                  <div class="col">
+                    <figure>
+                      <img
+                        src="../images/step1/LZ_NLZ_merged.png"
+                        alt=""
+                        style="max-width: 100%; height: auto"
+                      />
+                      <figcaption>Mergence of LZ and NLZ</figcaption>
+                    </figure>
+                  </div>
+                  <div class="col">
+                    <figure style="text-align: center">
+                      <img
+                        src="../images/step1/Train_Test_Points.png"
+                        alt=""
+                        style="width: 100%; height: auto"
+                      />
+                      <figcaption>Training/Testing Points</figcaption>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+              <p style="margin-top: 3em">
+                Then we sampled the environmental factors with the training and
+                testing point layers. As you can see below, this is the
+                attribute table after sampling.
+              </p>
+              <div class="container text-center">
+                <div class="row">
+                  <div class="col">
+                    <figure>
+                      <img
+                        src="../images/step1/trainingPointsSampled.jpg"
+                        alt=""
+                        style="max-width: 100%; height: auto"
+                      />
+                      <figcaption>
+                        Training and Testing Points Sampled
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
